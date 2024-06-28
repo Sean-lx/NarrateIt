@@ -9,3 +9,4 @@
 .env
 main.ipynb
 .streamlit/secrets.toml
+.narrateit
