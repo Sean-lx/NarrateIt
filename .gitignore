@@ -10,3 +10,5 @@
 main.ipynb
 .streamlit/secrets.toml
 .narrateit
+output/*
+.DS_Store

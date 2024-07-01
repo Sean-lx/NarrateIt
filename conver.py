@@ -23,6 +23,7 @@ class URLToAudioConverter:
         }
         """
         self.conversation_out = ""
+        self.output_folder = "./output"
 
     def fetch_text(self, url):
         prefix_url = "https://r.jina.ai/"
@@ -51,6 +52,7 @@ class URLToAudioConverter:
         filenames = []
         random_bytes = os.urandom(8)
         folder_name = base64.urlsafe_b64encode(random_bytes).decode("utf-8")
+        folder_name = os.path.join(self.output_folder, folder_name)
         os.makedirs(folder_name, exist_ok=True)
 
         for i, turn in enumerate(conversation["conversation"]):

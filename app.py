@@ -1,6 +1,6 @@
 import streamlit as st
 from conver import URLToAudioConverter
-import os
+import sys, os
 
 groq_api_key = st.secrets["GROQ_API_KEY"]
 dg_api_key = st.secrets["DG_API_KEY"]
